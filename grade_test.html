@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<script src="grade_test_js.js"></script>
+
+<link rel="stylesheet" type="text/css" href="bootstrap.css"></link>
+<link rel="stylesheet" type="text/css" href="grade_test.css"></link>
+<html>
+<body onload="go()">
+
+<div id="myDiv" class="container-fluid" style="background-color: #f2dede"> <!-- f2dede for red, fcf8e3 for yellow -->
+
+</div>
+
+<div id="myDiv2" class="container-fluid" style="background-color: #f2dede">
+
+
+<br> <br>
+<input type="button" value="Add Year" id="add_year" onClick="add_year()" class="btn btn-danger"></input>
+<br> <br>
+<input type="button" value="Calculate" id="calculate_button" onClick="gpas()" class="btn btn-danger"></input>
+<br><br>
+</div>
+</body>
+
+<br> <br> 
+
+<!-- the Gen ed calculater table-->
+<FORM Name="GENedCalcForm">
+<TABLE BORDER=5>
+
+<TR>
+<TH COLSPAN=8  class="tablehead1" /><font size=+1>General Education Tracker</font></TH>
+</TR>
+
+
+
+<TR>
+        <TH colspan=2>Fundamental Studies: (5 Courses, 15 Credits)</TH>
+        <TH colspan=2>Distributive Studies: (8 courses, 25 credits)</TH>
+        <TH colspan=2>Diversity: (2 courses, 4-6 credits)</TH>
+        <TH colspan=2>Signiture Courses: (2 courses, 4-6 credits)</TH>
+</TR>
+<TR>
+        <TH>Academic Writing:(FSAW)</TH>
+        <TH COLSPAN=1> <input name="" id="fsaw" parseFloat("") maxlength=1  readonly type="tel"></TH>
+        <TH>Natural Sciences:(DSNS) </TH>
+        <TH COLSPAN=1> <input name="" id="dsns" parseFloat("") readonly type="text"></TH>
+        <TH>Understanding Plural Societies:(DVUP) </TH>
+        <TH COLSPAN=1> <input name="" id="dvup" parseFloat("") readonly type="text"></TH>
+        <TH>I-Series:(IS)</TH>
+        <TH COLSPAN=1> <input name="" id="scis" parseFloat("") readonly type="text"></TH>
+
+</TR>
+
+<TR>
+        <TH>Mathematics:(FSMA)</TH>
+        <TH COLSPAN=1> <input name="" id="fsma" parseFloat("") readonly type="text"></TH>
+        <TH>Humanities:(DSHU)</TH>
+        <TH COLSPAN=1> <input name="" id="dshu" parseFloat("") readonly type="text"></TH>
+        <TH>Cultural Competence:(DVCC)</TH>
+        <TH COLSPAN=1> <input name="" id="dvcc" parseFloat("") readonly type="text"></TH>
+        
+</TR>
+
+<TR>
+        <TH>Professional Writing:(FSPW)</TH>
+        <TH COLSPAN=1> <input name="" id="fspw" parseFloat("") readonly type="text"></TH>
+        <TH>Scholarship in Practice:(DSSP)</TH>
+        <TH COLSPAN=1> <input name="" id="dssp_in" parseFloat("") readonly type="text"></TH>
+        
+</TR>
+
+<TR>
+        <TH>Oral Communications:(FSOC)</TH>
+        <TH COLSPAN=1> <input name="" id="fsoc" parseFloat("") readonly type="text"></TH>
+		<TH>Analytical Reasoning:(FSAR)</TH>
+        <TH COLSPAN=1> <input name="" id="fsar" parseFloat("") readonly type="text"></TH>
+       
+</TR>
+
+<TR>
+        
+        <TH>Historical Sciences:(DSHS)</TH>
+        <TH COLSPAN=1> <input name="" id="dshs" parseFloat("") readonly type="text"></TH>
+        
+</TR>
+<TR>
+        <TH>Progress:</TH>
+        <TH COLSPAN=1> <input name="" id="" parseFloat("") readonly type="text"></TH>
+        <TH>Progress:</TH>
+        <TH COLSPAN=1> <input name="" id="" parseFloat("") readonly type="text"></TH>
+        <TH>Progress:</TH>
+        <TH COLSPAN=1> <input name="" id="" parseFloat("") readonly type="text"></TH>
+        <TH>Progress:</TH>
+        <TH COLSPAN=1> <input name="" id="" parseFloat("") readonly type="text"></TH>
+        
+</TR>
+
+</table>
+</form>
+
+
+</html>
