@@ -1,28 +1,41 @@
-var count;
-var numFields = 6;
+// This is the Javascript function which contains all of the calculation code for the HTML tables //
+// it also creates the tables aswell // 
 
+var count; // this variable is composed of 2 numbers (the year and the semester)
+var numFields = 6; // # of empty text boxes for courses for each semester (right now, we have placed 6 course per semester)
+
+// this is the function that is executed as soon as the html page is loaded in the <body onload> tag
+// this function executes another function called "init"
 function go() {
 	init();
+
 }
 
+// ############################################################################################################
+// function to create the tables (runs a series of similar loops through each of the repeating tables)
 function init() {
-	count = "2";
+	count = "2"; // start out with 2 tables
 	var table1 = initYearTable(1);
 	myDiv.appendChild(table1);
 }
+// ############################################################################################################
 
+// this function runs the total_credits(), sem_gpa(), cumulative_gpa(), and gened_go() functions
 function gpas() {
-	var numYears = count.length;
+	var numYears = count.length; // numYears = the length of the count variable(the number of tables)
+	// for loop that starts with i=1, goes up be 1 until i is <= to numYears
 	for(var i = 1; i <= numYears; i++) {
 		var numSems = parseInt(count.charAt(i-1));
 		for(var j = 1; j <= numSems; j++) {
-			cumulative_gpa(i,j);
+			cumulative_gpa(i,j); 
 			total_credits(i,j);
 			sem_gpa(i,j);
 		}
 	}
 	gened_go();
+	gened_progress();
 }
+
 
 function total_credits(year, sem) {
 	var numYears = count.length;
@@ -79,6 +92,7 @@ function sem_gpa(year, sem) {
 	
 }
 
+// ############################################################################################################
 function cumulative_gpa(year, sem) {
 	var numYears = count.length;
 	if(year < count.length) {
@@ -117,7 +131,7 @@ function cumulative_gpa(year, sem) {
 	document.getElementById("y" + year + "s" + sem + "cg").value = round_gpa;
 }
 
-
+// ############################################################################################################
 function add_year() {
 	var numYears = count.length;
 	count = count+"2";
@@ -125,6 +139,7 @@ function add_year() {
 	myDiv.appendChild(table1);	
 }
 
+// ############################################################################################################
 // Creates a default year table with the name y1table
 // starts with 2 semesters, can add more
 function initYearTable(num) {
@@ -504,9 +519,12 @@ function createTables(numTables) {
 }
 
 
+// look into doing the sum of credits of all the fundamental studies. For example
+// if sum of credits completed for Fund Studeis is 0-8 = low, 9-12 = medium, 13-14 = almost there, 15=complete
+
+
 // org_script starts here
 
-// JAVASCRIPT CODE FOR 4 Year Organizer
 // ############################################################################################################
 function gened_go() {
 	
@@ -538,6 +556,28 @@ function gened_go() {
 		}
 	}	
 }
+
+
+function gened_progress() {
+	if (parseInt(document.getElementById("fsaw").value) == 3 || parseInt(document.getElementById("fsaw").value) == 4); {
+		document.getElementById("fsaw_done").checked = true;
+	}
+}
+function rockstar() {
+	if (parseInt(document.getElementById("fsma").value) == 3 || parseInt(document.getElementById("fsma").value) == 4); {
+		document.getElementById("fsma_done").checked = true;
+	}
+	if (parseInt(document.getElementById("fspw").value) == 3 || parseInt(document.getElementById("fspw").value) == 4); {
+		document.getElementById("fspw_done").checked = true;
+	}
+	if (parseInt(document.getElementById("fsoc").value) == 3 || parseInt(document.getElementById("fsoc").value) == 4); {
+		document.getElementById("fsoc_done").checked = true;
+	}
+	if (parseInt(document.getElementById("fsar").value) == 3 || parseInt(document.getElementById("fsar").value) == 4); {
+		document.getElementById("fsar_done").checked = true;
+	}
+}
+
 
 // This is the function for selecting school (After you select a college within UMD the next drop down major your specific major will be modified to just majors within that major)
 function selectSchool() {
@@ -590,3 +630,4 @@ function selectMajor() {
 
     return major;
 }
+
