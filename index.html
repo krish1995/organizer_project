@@ -1,48 +1,232 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--This defines the document type as an HTML file-->
+
+
+<!-- script references for javascript calculation functions-->
+<script src="grade_test_js.js"></script> 
+<script src="automatic_fill.js"></script>
+
+<!-- stylesheets to make html look better-->
+<link rel="stylesheet" type="text/css" href="bootstrap.css"></link>
+<link rel="stylesheet" type="text/css" href="grade_test.css"></link>
+
+
+<!--starts the html code-->
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Organizer project by krish1995</title>
-  </head>
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<table align=left border=5 width=50% >
+<tr>
+        <th colspan=100 class="container-fluid" style="background-color: #fcf8e3" /><font size=+5><center>Four Year Organizer</center></font></th>
+</tr>
+<tr>
+        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Name:</font></th>
+                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 size=42><B>
+                </td>
 
-        <header>
-          <h1>Organizer project</h1>
-          <h2>In this repository, we will work on the four year planner project</h2>
-        </header>
+</tr>
+<tr>
+        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>School:</font></th>
+                <td align=left class="container-fluid" style="background-color: #f2dede">
+                        <select name="school" maxlength=75 size=1>
+                                <option value="1" selected>Agriculture and Natural Planning 
+                                <option value="2" selected>Architecture, Planning, and Preservation 
+                                <option value="3" selected>Arts and Humanities 
+                                <option value="4" selected>Behavorial and Social Sciences 
+                                <option value="5" selected>Smith School of Business
+                                <option value="6" selected>Computer, Mathematical, and Natural Sciences
+                                <option value="7" selected>Education
+                                <option value="8" selected>Clark School of Engineering
+                                <option value="9" selected>Graduate School
+                                <option value="10" selected>Journalism
+                                <option value="11" selected>Information Studies
+                                <option value="12" selected>Public Health
+                                <option value="13" selected>Public Policy
+                                <option value="14" selected>Undergraduate Studies
+                                <option value="15" selected>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/krish1995/organizer_project/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/krish1995/organizer_project/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/krish1995/organizer_project" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+                        </select>
+                </td>
+</tr>
+<tr>
+        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Major:</font></th>
+        <th colspan=3 class="container-fluid" style="background-color: #f2dede">
+                <!-- creates a button for the calculation of all the gpa's and gened functions-->
+                <input type="button" value="Mechanical Engineering" id="af_mech" onClick="meche()" class="btn btn-danger"></input>
 
-        <hr>
+                <!-- creates a button for the calculation of all the gpa's and gened functions-->
+                <input type="button" value="Computer Science" id="af_mech" onClick="cmsc()" class="btn btn-danger"></input>
+        </th>
+</tr>
+<tr>
+        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Minor:</font></th>
+                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 size=42><B>
+                </td>
+                </td>
+</tr>
+<tr>
+        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Scholarship:</font></th>
+                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 size=42><B>
+                </td>
+                </td>
+</tr>
+<tr>
+        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Specialty Programs:</font></th>
+                <td align=left class="container-fluid" style="background-color: #f2dede">
+                        <select name="school" maxlength=75 size=1>
+                                <option value="1" selected>Beyond the Classroom
+                                <option value="2" selected>BioFire Living and Learning Center
+                                <option value="3" selected>Carilion Communities
+                                <option value="4" selected>CIVICUS
+                                <option value="5" selected>College Park Scholars
+                                <option value="6" selected>Flexus
+                                <option value="7" selected>Hinman CEO
+                                <option value="8" selected>University Honors Program
+                                <option value="9" selected>QUEST Honors Program
+                                <option value="10" selected>Jimenez-Porter Writer's House
+                                <option value="11" selected>Language House
+                                <option value="12" selected>Virtus
+                                <option value="13" selected>
+                        </select>
+                </td>
+</tr>
 
-        <section id="main_content">
-          <p>We are currently working on a way to project the webpage directly on this github project page. For now, please download the zip file into a folder on your computer, right click on the html page and open it with a desired web browser such as google chrome. </p>
+</table>
 
-<p>Please offer suggestions. Thank you</p>
-        </section>
 
-        <footer>
-          Organizer project is maintained by <a href="https://github.com/krish1995">krish1995</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+<!-- the Gen ed calculater table-->
+<form Name="GENedCalcForm">
+<table align="right" border=5 width=50% class="container-fluid" style="background-color: #f2dede">
 
-        
-      </div>
-    </div>
-  </body>
+<tr>
+        <th colspan=3 class="tablehead1" /><font size=+1><center>General Education Tracker</center></font></th>
+</tr>
+<tr>
+        <th colspan=2><center>Fundamental Studies: (5 Courses, 15 Credits)</center></th>
+        <th colspan=1> <input name="" id="fs" parseFloat("") readonly type="text"></th>
+</tr>
+<tr>
+        <th>Academic Writing:</th>
+        <th colspan=1> <input name="" id="fsaw" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="fsaw_done" id="fsaw_done" ></center></th>
+</tr>
+<tr>
+        <th>Mathematics:</th>
+        <th colspan=1> <input name="" id="fsma" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="fsma_done" id="fsma_done" ></center></th>
+</tr>
+<tr>
+        <th>Professional Writing:</th>
+        <th colspan=1> <input name="" id="fspw" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="fspw_done" id="fspw_done" ></center></th>
+</tr>
+<tr>
+        <th>Oral Communications:</th>
+        <th colspan=1> <input name="" id="fsoc" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="fsoc_done" id="fsoc_done" ></center></th>
+</tr>
+<tr>
+        <th>Analytical Reasoning:</th>
+        <th colspan=1> <input name="" id="fsar" parseFloat("") readonly type="text"></th> 
+        <th><center><input type="checkbox" name="fsar_done" id="fsar_done" ></center></th>
+</tr> 
+<tr>
+        <th colspan=2><center>Distributive Studies: (8 courses, 25 credits)</center></th>
+        <th colspan=1> <input name="" id="ds" parseFloat("") readonly type="text"></th>
+</tr>
+<tr>
+        <th>Natural Sciences:</th>
+        <th colspan=1> <input name="" id="dsns" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="dsns_done" id="dsns_done" ></center></th>
+</tr>
+<tr>
+        <th>Humanities:</th>
+        <th colspan=1> <input name="" id="dshu" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="dshu_done" id="dshu_done" ></center></th>
+</tr>
+<tr>
+        <th>Historical Sciences:</th>
+        <th colspan=1> <input name="" id="dshs" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="dsns_done" id="dsns_done" ></center></th>
+</tr>
+<tr>
+        <th>Scholarship in Practice:(in)</th>
+        <th colspan=1> <input name="" id="dssp_in" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="dsspin_done" id="dsspin_done" ></center></th>  
+</tr>
+<tr>
+        <th>Scholarship in Practice:(out)</th>
+        <th colspan=1> <input name="" id="dssp_out" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="dsspout_done" id="dsspout_done" ></center></th>  
+</tr>
+<tr>
+        <th colspan=2><center>Diversity: (2 courses, 4-6 credits)</center></th>
+        <th colspan=1> <input name="" id="dv" parseFloat("") readonly type="text"></th>
+</tr>
+        <th>Understanding Plural Societies:</th>
+        <th colspan=1> <input name="" id="dvup" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="dvup_done" id="dvup_done" ></center></th>
+</tr>
+<tr>
+        <th>Cultural Competence:</th>
+        <th colspan=1> <input name="" id="dvcc" parseFloat("") readonly type="text"></th> 
+        <th><center><input type="checkbox" name="dvcc_done" id="dvcc_done" ></center></th>  
+</tr>
+<tr>
+        <th colspan=2><center>Signiture Courses: (2 courses, 4-6 credits)</center></th>
+        <th colspan=1> <input name="" id="sc" parseFloat("") readonly type="text"></th>
+</tr>
+<tr>
+        <th>I-Series:(IS)</th>
+        <th colspan=1> <input name="" id="scis" parseFloat("") readonly type="text"></th>
+        <th><center><input type="checkbox" name="scis_done" id="scis_done" ></center></th>
+</tr>
+
+
+</table>
+</form>
+
+
+<br>
+
+<img src="http://www.trademarks.umd.edu/marks/gr/primary2.gif" alt="UMD Logo" style="width:500px;height:200px;" class="container-fluid" style="background-color: #f2dede">
+
+
+<!-- creates a button to add another year; 
+1. input type: type of <input> element to display: here we want a button to click on
+2. value: the text is says on the botton
+3. id: the id of the textbox
+4. onClick: when clicked, it will conduct this operation. For example, the Add year botton will perform the add_year function written in the javascript-->
+<input type="button" value="Add Year" id="add_year" onClick="add_year()" class="btn btn-danger"></input>
+
+
+<!-- creates a button for the calculation of all the gpa's and gened functions-->
+<input type="button" value="Calculate" id="calculate_button" onClick="gpas()" class="btn btn-danger"></input>
+<!-- ################################################################################ -->
+
+
+<!-- tag that executes a javascript command as soon as the page has been loaded. Here we are running the JS function go() after the page has been loaded-->
+<body onload="go()">
+
+<!-- division/section 1 of the document = "div" tag -->
+<div id="myDiv" class="container-fluid" style="background-color: #fcf8e3"> <!-- f2dede for red, fcf8e3 for yellow (used in the bootstrap library for adding color-->
+</div>
+
+<!-- division/section 2 of the document = "div" tag -->
+<div id="myDiv2" class="container-fluid" style="background-color: #f2dede">
+
+
+
+
+
+
+
+<!-- end of the 2 division and end of the body-->
+</div> 
+</body>
+
+
+
+<!--#####################################################################################################################################################-->
+
+
+
 </html>
