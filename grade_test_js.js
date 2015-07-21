@@ -178,8 +178,9 @@ function initYearTable(num) {
 	tablebody.appendChild(row);
 	table.appendChild(tablebody);
 	
-	var sem1 = createSemTable("Semester 1", id + "s1");
-	var sem2 = createSemTable("Semester 2", id + "s2");
+	// modified names for clarity, change back to "Semester 1" and "Semester 2"
+	var sem1 = createSemTable("Fall Semester", id + "s1");
+	var sem2 = createSemTable("Spring Semester", id + "s2");
 	// var scol = createSemTable("SPRING", id + "s");
 	// var mcol = createSemTable("SUMMER", id + "m");
 	
