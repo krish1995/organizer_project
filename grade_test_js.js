@@ -560,25 +560,15 @@ function gened_go() {
 
 
 function gened_progress() {
-	if (parseInt(document.getElementById("fsaw").value) == 3 || parseInt(document.getElementById("fsaw").value) == 4); {
-		document.getElementById("fsaw_done").checked = true;
-	}
-}
-function rockstar() {
-	if (parseInt(document.getElementById("fsma").value) == 3 || parseInt(document.getElementById("fsma").value) == 4); {
-		document.getElementById("fsma_done").checked = true;
-	}
-	if (parseInt(document.getElementById("fspw").value) == 3 || parseInt(document.getElementById("fspw").value) == 4); {
-		document.getElementById("fspw_done").checked = true;
-	}
-	if (parseInt(document.getElementById("fsoc").value) == 3 || parseInt(document.getElementById("fsoc").value) == 4); {
-		document.getElementById("fsoc_done").checked = true;
-	}
-	if (parseInt(document.getElementById("fsar").value) == 3 || parseInt(document.getElementById("fsar").value) == 4); {
-		document.getElementById("fsar_done").checked = true;
-	}
-}
+var fsaw = parseInt(document.getElementById("fsaw").value) || 0;
+var fsma = parseInt(document.getElementById("fsma").value) || 0;
+var fspw = parseInt(document.getElementById("fspw").value) || 0;
+var fsoc = parseInt(document.getElementById("fsoc").value) || 0;
+var fsar = parseInt(document.getElementById("fsar").value) || 0;
 
+var fs_sum = fsaw + fsma + fspw + fsoc + fsar;
+document.getElementById("fs_sum").value == fs_sum;
+}
 
 // This is the function for selecting school (After you select a college within UMD the next drop down major your specific major will be modified to just majors within that major)
 function selectSchool() {
