@@ -567,6 +567,7 @@ var fsoc = parseInt(document.getElementById("fsoc").value) || 0;
 var fsar = parseInt(document.getElementById("fsar").value) || 0;
 
 var fs_sum = fsaw + fsma + fspw + fsoc + fsar;
+alert(fs_sum);
 document.getElementById("fs_sum").value == fs_sum;
 }
 
