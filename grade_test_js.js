@@ -568,7 +568,7 @@ var fsar = parseInt(document.getElementById("fsar").value) || 0;
 
 var fs_sum = fsaw + fsma + fspw + fsoc + fsar;
 alert(fs_sum);
-document.getElementById("fs_sum").value == fs_sum;
+document.getElementById("fs_sum").value = fs_sum;
 }
 
 // This is the function for selecting school (After you select a college within UMD the next drop down major your specific major will be modified to just majors within that major)
