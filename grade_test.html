@@ -5,180 +5,303 @@
 <script src="grade_test_js.js"></script> 
 <script src="automatic_fill.js"></script>
 
+<script type="text/javascript" src="script.js"></script>
+
 <!-- stylesheets to make html look better-->
 <link rel="stylesheet" type="text/css" href="bootstrap.css"></link>
 <link rel="stylesheet" type="text/css" href="grade_test.css"></link>
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 <!--starts the html code-->
 <html>
 
-<table align=left border=5 width=50% >
-<tr>
-        <th colspan=100 class="container-fluid" style="background-color: #fcf8e3" /><font size=+5><center>Four Year Organizer</center></font></th>
-</tr>
-<tr>
-        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Name:</font></th>
-                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 size=42><B>
-                </td>
+<table align=left border=5 width=65% >
+        <tr>
+                <th colspan=100 class="container-fluid" style="background-color: #fcf8e3" /><font size=+5><center>Four Year Organizer</center></font></th>
+        </tr>
+        <tr>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3" ><font size= +1>Name:</font></th>
+                        <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" id="name" VALUE="" maxlength=25 style="width: 600px;" ><B>
+                        </td>
 
-</tr>
-<tr>
-        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>School:</font></th>
-                <td align=left class="container-fluid" style="background-color: #f2dede">
-                        <select name="school" maxlength=75 size=1>
-                                <option value="1" selected>Agriculture and Natural Planning 
-                                <option value="2" selected>Architecture, Planning, and Preservation 
-                                <option value="3" selected>Arts and Humanities 
-                                <option value="4" selected>Behavorial and Social Sciences 
-                                <option value="5" selected>Smith School of Business
-                                <option value="6" selected>Computer, Mathematical, and Natural Sciences
-                                <option value="7" selected>Education
-                                <option value="8" selected>Clark School of Engineering
-                                <option value="9" selected>Graduate School
-                                <option value="10" selected>Journalism
-                                <option value="11" selected>Information Studies
-                                <option value="12" selected>Public Health
-                                <option value="13" selected>Public Policy
-                                <option value="14" selected>Undergraduate Studies
-                                <option value="15" selected>
+        </tr>
+        <tr>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>School:</font></th>
+                        <td align=left class="container-fluid" style="background-color: #f2dede">
+                                <select name="college" id="college" maxlength=75 size=1 style="width: 300px;">
+                                        <option value="1" selected>Agriculture and Natural Planning 
+                                        <option value="2" selected>Architecture, Planning, and Preservation 
+                                        <option value="3" selected>Arts and Humanities 
+                                        <option value="4" selected>Behavorial and Social Sciences 
+                                        <option value="5" selected>Smith School of Business
+                                        <option value="6" selected>Computer, Mathematical, and Natural Sciences
+                                        <option value="7" selected>Education
+                                        <option value="8" selected>Clark School of Engineering
+                                        <option value="9" selected>Graduate School
+                                        <option value="10" selected>Journalism
+                                        <option value="11" selected>Information Studies
+                                        <option value="12" selected>Public Health
+                                        <option value="13" selected>Public Policy
+                                        <option value="14" selected>Undergraduate Studies
+                                        <option value="15" selected>
+                                </select>
+                                <select name="college_double" id="college_double" maxlength=75 size=1 style="width: 300px;">
+                                        <option value="1" selected>Agriculture and Natural Planning 
+                                        <option value="2" selected>Architecture, Planning, and Preservation 
+                                        <option value="3" selected>Arts and Humanities 
+                                        <option value="4" selected>Behavorial and Social Sciences 
+                                        <option value="5" selected>Smith School of Business
+                                        <option value="6" selected>Computer, Mathematical, and Natural Sciences
+                                        <option value="7" selected>Education
+                                        <option value="8" selected>Clark School of Engineering
+                                        <option value="9" selected>Graduate School
+                                        <option value="10" selected>Journalism
+                                        <option value="11" selected>Information Studies
+                                        <option value="12" selected>Public Health
+                                        <option value="13" selected>Public Policy
+                                        <option value="14" selected>Undergraduate Studies
+                                        <option value="15" selected>
+                                </select>
+                        </td>
+        </tr>
+        <tr>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Major:</font></th>
+                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 style="width: 600px;"><B>  
+                
+                </td>
+        </tr>
+        <tr>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Minor:</font></th>
+                          <td align=left class="container-fluid" style="background-color: #f2dede">      
+                                <select name="major" id="major" maxlength=75 size=1 style="width: 600px;">
+                                        <option value="1" selected>Actuarial Mathematics
+                                        <option value="2" selected>Agribusiness Economics
+                                        <option value="3" selected>Arabic
+                                        <option value="4" selected>Archaeology
+                                        <option value="5" selected>Art History
+                                        <option value="6" selected>Asian American Studies
+                                        <option value="7" selected>Astronomy
+                                        <option value="8" selected>Atmospheric Chemistry
+                                        <option value="9" selected>Atmospheric Sciences
+                                        <option value="11" selected>Black Women's Studies
+                                        <option value="12" selected>Business Analytics
+                                        <option value="13" selected>Chinese Language
+                                        <option value="14" selected>Community Health
+                                        <option value="15" selected>Computer Science
+                                        <option value="16" selected>Creative Writing
+                                        <option value="17" selected>Earth History
+                                        <option value="18" selected>Earth Material Properties
+                                        <option value="19" selected>Education, Secondary
+                                        <option value="20" selected>Education, Second Language      
+                                        <option value="21" selected>Education, Special
+                                        <option value="22" selected>Engineering Leadership Development
+                                        <option value="23" selected>Environmental Economics and Policy
+                                        <option value="24" selected>French Studies
+                                        <option value="25" selected>General Business
+                                        <option value="26" selected>Germanic Studies
+                                        <option value="27" selected>Geochemistry
+                                        <option value="28" selected>Geographic Information Science
+                                        <option value="29" selected>Geophysics
+                                        <option value="30" selected>Global Poverty
+                                        <option value="10" selected>Global Studies Minor Program
+                                        <option value="10" selected>Global Terrorism
+                                        <option value="10" selected>Greek Language and Culture
+                                        <option value="10" selected>Hearing and Speech Sciences
+                                        <option value="10" selected>Human Development and Quantitative Methodology
+                                        <option value="10" selected>Hydrology
+                                        <option value="10" selected>Innovation and Entrepreneurship
+                                        <option value="10" selected>International Development and Conflict Management
+                                        <option value="10" selected>International Engineering
+                                        <option value="10" selected>Israel Studies
+                                        <option value="10" selected>Italian Language and Culture
+                                        <option value="10" selected>Japanese
+                                        <option value="10" selected>Jewish Studies
+                                        <option value="10" selected>Korean Studies
+                                        <option value="10" selected>Landscape Management
+                                        <option value="10" selected>Latin Language and Literature
+                                        <option value="10" selected>Law and Society
+                                        <option value="10" selected>Leadership Studies
+                                        <option value="10" selected>Lesbian, Gay, Bisexual and Transgender Studies
+                                        <option value="10" selected>Linguistics
+                                        <option value="10" selected>Mathematics
+                                        <option value="10" selected>Meteorology
+                                        <option value="10" selected>Middle East Studies
+                                        <option value="10" selected>Military Studies
+                                        <option value="10" selected>Music Performance
+                                        <option value="10" selected>Mythology, Classical
+                                        <option value="10" selected>Nanoscale Science and Technology
+                                        <option value="10" selected>Neuroscience   
+                                        <option value="10" selected>Nuclear Engineering
+                                        <option value="10" selected>Persian Studies
+                                        <option value="10" selected>Philosophy
+                                        <option value="10" selected>Physics
+                                        <option value="10" selected>Planetary Sciences
+                                        <option value="10" selected>Portuguese Language, Literatures, and Cultures
+                                        <option value="10" selected>Professional Writing
+                                        <option value="10" selected>Project Management
+                                        <option value="10" selected>Public Leadership
+                                        <option value="10" selected>Religious Studies
+                                        <option value="10" selected>Remote Sensing of Environmental Change
+                                        <option value="10" selected>Resource and Agricultural Policy in Economic Development
+                                        <option value="10" selected>Rhetoric
+                                        <option value="10" selected>Russian Studies
+                                        <option value="10" selected>Soil Science
+                                        <option value="10" selected>Spanish Language and Cultures
+                                        <option value="10" selected>Spanish Language, Business, and Cultures
+                                        <option value="10" selected>Sport Commerce and Culture
+                                        <option value="10" selected>Statistics
+                                        <option value="10" selected>Surficial Geology
+                                        <option value="10" selected>Survey Methodology
+                                        <option value="10" selected>Sustainability Studies
+                                        <option value="10" selected>Technology Entrepreneurship
+                                        <option value="10" selected>U.S. Latina/o Studies
+                                        <option value="10" selected>None
+                                        <option value="10" selected>                                    
+                                </select>
+                          </td>      
+        </tr>
+        <tr>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Scholarship(s):</font></th>
+                        <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=100 style="width: 600px;"><B>
 
-                        </select>
-                </td>
-</tr>
+        </tr>
+        <tr>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Specialty Programs:</font></th>
+                        <td align=left class="container-fluid" style="background-color: #f2dede">
+                                <select name="program1" maxlength=5000000 size=1 style="width: 300px;">
+                                        <option value="1" selected>Beyond the Classroom
+                                        <option value="2" selected>BioFire Living and Learning Center
+                                        <option value="3" selected>Carilion Communities
+                                        <option value="4" selected>CIVICUS
+                                        <option value="5" selected>College Park Scholars
+                                        <option value="6" selected>Flexus
+                                        <option value="7" selected>Hinman CEO
+                                        <option value="8" selected>University Honors Program
+                                        <option value="9" selected>QUEST Honors Program
+                                        <option value="10" selected>Jimenez-Porter Writer's House
+                                        <option value="11" selected>Language House
+                                        <option value="12" selected>Virtus
+                                        <option value="13" selected>
+                                </select>
+                                <select name="program2" maxlength=500000 size=1 style="width: 300px;">
+                                        <option value="1" selected>Beyond the Classroom
+                                        <option value="2" selected>BioFire Living and Learning Center
+                                        <option value="3" selected>Carilion Communities
+                                        <option value="4" selected>CIVICUS
+                                        <option value="5" selected>College Park Scholars
+                                        <option value="6" selected>Flexus
+                                        <option value="7" selected>Hinman CEO
+                                        <option value="8" selected>University Honors Program
+                                        <option value="9" selected>QUEST Honors Program
+                                        <option value="10" selected>Jimenez-Porter Writer's House
+                                        <option value="11" selected>Language House
+                                        <option value="12" selected>Virtus
+                                        <option value="13" selected>
+                                </select>
+                        </td>
+        </tr>
 <tr>
-        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Major:</font></th>
-        <th colspan=3 class="container-fluid" style="background-color: #f2dede">
-                <!-- creates a button for the calculation of all the gpa's and gened functions-->
-                <input type="button" value="Mechanical Engineering" id="af_mech" onClick="meche()" class="btn btn-danger"></input>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Incoming Credits Completed:</font></th>
+                        <td align=left class="container-fluid" style="background-color: #f2dede">
+                                <input type=text name="incoming_credits" VALUE="" maxlength=25 style="width: 550px;"><B>  
+                                <input type=text name="incoming_credits" id="incoming_credits" VALUE="" maxlength=25 style="width: 50px;"><B>
 
-                <!-- creates a button for the calculation of all the gpa's and gened functions-->
-                <input type="button" value="Computer Science" id="af_mech" onClick="cmsc()" class="btn btn-danger"></input>
-        </th>
-</tr>
-<tr>
-        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Minor:</font></th>
-                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 size=42><B>
-                </td>
-                </td>
-</tr>
-<tr>
-        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Scholarship:</font></th>
-                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 size=42><B>
-                </td>
-                </td>
-</tr>
-<tr>
-        <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Specialty Programs:</font></th>
-                <td align=left class="container-fluid" style="background-color: #f2dede">
-                        <select name="school" maxlength=75 size=1>
-                                <option value="1" selected>Beyond the Classroom
-                                <option value="2" selected>BioFire Living and Learning Center
-                                <option value="3" selected>Carilion Communities
-                                <option value="4" selected>CIVICUS
-                                <option value="5" selected>College Park Scholars
-                                <option value="6" selected>Flexus
-                                <option value="7" selected>Hinman CEO
-                                <option value="8" selected>University Honors Program
-                                <option value="9" selected>QUEST Honors Program
-                                <option value="10" selected>Jimenez-Porter Writer's House
-                                <option value="11" selected>Language House
-                                <option value="12" selected>Virtus
-                                <option value="13" selected>
-                        </select>
-                </td>
-</tr>
+                                <!-- creates a button for completion of table 1-->
+                                <input type="button" value="Complete" id="af_mech" onClick="general_tutorial()" class="btn btn-danger"></input>
+                        </td>
+        </tr>
 
-</table>
+        </table>
 
 
-<!-- the Gen ed calculater table-->
+        <!-- the Gen ed calculater table-->
 <form Name="GENedCalcForm">
-<table align="right" border=5 width=50% class="container-fluid" style="background-color: #f2dede">
+<table align="right" border=5 width=35% class="container-fluid" style="background-color: #f2dede">
 
-<tr>
-        <th colspan=3 class="tablehead1" /><font size=+1><center>General Education Tracker</center></font></th>
-</tr>
-<tr>
-        <th colspan=2><center>Fundamental Studies: (5 Courses, 15 Credits)</center></th>
-        <th colspan=1> <input name="" id="fs" parseFloat("") readonly type="text"></th>
-</tr>
-<tr>
-        <th>Academic Writing:</th>
-        <th colspan=1> <input name="" id="fsaw" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="fsaw_done" id="fsaw_done" ></center></th>
-</tr>
-<tr>
-        <th>Mathematics:</th>
-        <th colspan=1> <input name="" id="fsma" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="fsma_done" id="fsma_done" ></center></th>
-</tr>
-<tr>
-        <th>Professional Writing:</th>
-        <th colspan=1> <input name="" id="fspw" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="fspw_done" id="fspw_done" ></center></th>
-</tr>
-<tr>
-        <th>Oral Communications:</th>
-        <th colspan=1> <input name="" id="fsoc" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="fsoc_done" id="fsoc_done" ></center></th>
-</tr>
-<tr>
-        <th>Analytical Reasoning:</th>
-        <th colspan=1> <input name="" id="fsar" parseFloat("") readonly type="text"></th> 
-        <th><center><input type="checkbox" name="fsar_done" id="fsar_done" ></center></th>
-</tr> 
-<tr>
-        <th colspan=2><center>Distributive Studies: (8 courses, 25 credits)</center></th>
-        <th colspan=1> <input name="" id="ds" parseFloat("") readonly type="text"></th>
-</tr>
-<tr>
-        <th>Natural Sciences:</th>
-        <th colspan=1> <input name="" id="dsns" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="dsns_done" id="dsns_done" ></center></th>
-</tr>
-<tr>
-        <th>Humanities:</th>
-        <th colspan=1> <input name="" id="dshu" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="dshu_done" id="dshu_done" ></center></th>
-</tr>
-<tr>
-        <th>Historical Sciences:</th>
-        <th colspan=1> <input name="" id="dshs" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="dsns_done" id="dsns_done" ></center></th>
-</tr>
-<tr>
-        <th>Scholarship in Practice:(in)</th>
-        <th colspan=1> <input name="" id="dssp_in" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="dsspin_done" id="dsspin_done" ></center></th>  
-</tr>
-<tr>
-        <th>Scholarship in Practice:(out)</th>
-        <th colspan=1> <input name="" id="dssp_out" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="dsspout_done" id="dsspout_done" ></center></th>  
-</tr>
-<tr>
-        <th colspan=2><center>Diversity: (2 courses, 4-6 credits)</center></th>
-        <th colspan=1> <input name="" id="dv" parseFloat("") readonly type="text"></th>
-</tr>
-        <th>Understanding Plural Societies:</th>
-        <th colspan=1> <input name="" id="dvup" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="dvup_done" id="dvup_done" ></center></th>
-</tr>
-<tr>
-        <th>Cultural Competence:</th>
-        <th colspan=1> <input name="" id="dvcc" parseFloat("") readonly type="text"></th> 
-        <th><center><input type="checkbox" name="dvcc_done" id="dvcc_done" ></center></th>  
-</tr>
-<tr>
-        <th colspan=2><center>Signiture Courses: (2 courses, 4-6 credits)</center></th>
-        <th colspan=1> <input name="" id="sc" parseFloat("") readonly type="text"></th>
-</tr>
-<tr>
-        <th>I-Series:(IS)</th>
-        <th colspan=1> <input name="" id="scis" parseFloat("") readonly type="text"></th>
-        <th><center><input type="checkbox" name="scis_done" id="scis_done" ></center></th>
-</tr>
+        <tr>
+                <th colspan=3 class="tablehead1" /><font size=+1><center>General Education Tracker</center></font></th>
+        </tr>
+        <tr>
+                <th colspan=2><center>Fundamental Studies: (5 Courses, 15 Credits)</center></th>
+                <th colspan=1> <input name="" id="fs_sum" parseFloat("") readonly type="text"></th>
+        </tr>
+        <tr>
+                <th>Academic Writing:</th>
+                <th colspan=1> <input name="" id="fsaw" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="fsaw_done" id="fsaw_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Mathematics:</th>
+                <th colspan=1> <input name="" id="fsma" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="fsma_done" id="fsma_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Professional Writing:</th>
+                <th colspan=1> <input name="" id="fspw" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="fspw_done" id="fspw_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Oral Communications:</th>
+                <th colspan=1> <input name="" id="fsoc" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="fsoc_done" id="fsoc_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Analytical Reasoning:</th>
+                <th colspan=1> <input name="" id="fsar" parseFloat("") readonly type="text"></th> 
+                <th><center><input type="checkbox" name="fsar_done" id="fsar_done" ></center></th>
+        </tr> 
+        <tr>
+                <th colspan=2><center>Distributive Studies: (8 courses, 25 credits)</center></th>
+                <th colspan=1> <input name="" id="ds_sum" parseFloat("") readonly type="text"></th>
+        </tr>
+        <tr>
+                <th>Natural Sciences:(2)</th>
+                <th colspan=1> <input name="" id="dsns" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="dsns_done" id="dsns_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Humanities:(2)</th>
+                <th colspan=1> <input name="" id="dshu" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="dshu_done" id="dshu_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Historical Sciences:(2)</th>
+                <th colspan=1> <input name="" id="dshs" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="dsns_done" id="dsns_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Scholarship in Practice:(in)</th>
+                <th colspan=1> <input name="" id="dssp_in" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="dsspin_done" id="dsspin_done" ></center></th>  
+        </tr>
+        <tr>
+                <th>Scholarship in Practice:(out)</th>
+                <th colspan=1> <input name="" id="dssp_out" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="dsspout_done" id="dsspout_done" ></center></th>  
+        </tr>
+        <tr>
+                <th colspan=2><center>Diversity: (2 courses, 4-6 credits)</center></th>
+                <th colspan=1> <input name="" id="dv_sum" parseFloat("") readonly type="text"></th>
+        </tr>
+                <th>Understanding Plural Societies:</th>
+                <th colspan=1> <input name="" id="dvup" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="dvup_done" id="dvup_done" ></center></th>
+        </tr>
+        <tr>
+                <th>Cultural Competence:</th>
+                <th colspan=1> <input name="" id="dvcc" parseFloat("") readonly type="text"></th> 
+                <th><center><input type="checkbox" name="dvcc_done" id="dvcc_done" ></center></th>  
+        </tr>
+        <tr>
+                <th colspan=2><center>Signiture Courses: (2 courses, 4-6 credits)</center></th>
+                <th colspan=1> <input name="" id="sc_sum" parseFloat("") readonly type="text"></th>
+        </tr>
+        <tr>
+                <th>I-Series:(2)</th>
+                <th colspan=1> <input name="" id="scis" parseFloat("") readonly type="text"></th>
+                <th><center><input type="checkbox" name="scis_done" id="scis_done" ></center></th>
+        </tr>
 
 
 </table>
@@ -188,7 +311,6 @@
 <br>
 
 <img src="http://www.trademarks.umd.edu/marks/gr/primary2.gif" alt="UMD Logo" style="width:500px;height:200px;" class="container-fluid" style="background-color: #f2dede">
-
 
 <!-- creates a button to add another year; 
 1. input type: type of <input> element to display: here we want a button to click on
@@ -201,7 +323,17 @@
 <!-- creates a button for the calculation of all the gpa's and gened functions-->
 <input type="button" value="Calculate" id="calculate_button" onClick="gpas()" class="btn btn-danger"></input>
 <!-- ################################################################################ -->
+                      <br>
+                      <br>
+                      Popular Sample 4 Year Plans:
+                        <!-- creates a button for Mechanical Engineering plan-->
+                        <input type="button" value="Mechanical Engineering" id="af_mech" onClick="meche()" class="btn btn-danger"></input>
 
+                        <!-- creates a button for Computer Science plan-->
+                      <input type="button" value="Computer Science" id="af_mech" onClick="cmsc()" class="btn btn-danger"></input> 
+
+                        <!-- creates a button for Finance Plan-->
+                      <input type="button" value="Finance" id="af_mech" onClick="finance()" class="btn btn-danger"></input> 
 
 <!-- tag that executes a javascript command as soon as the page has been loaded. Here we are running the JS function go() after the page has been loaded-->
 <body onload="go()">
@@ -212,6 +344,12 @@
 
 <!-- division/section 2 of the document = "div" tag -->
 <div id="myDiv2" class="container-fluid" style="background-color: #f2dede">
+
+
+
+
+
+
 
 
 
