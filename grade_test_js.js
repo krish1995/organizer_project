@@ -34,7 +34,7 @@ function general_tutorial() {
 
     var c2 = alert("I offered ENGL101 as a starter because it is a course that all students take either their first or second semesters. Also it fufills one of your gened requirements (Academic Writing). Therefore, in the type column, you would select FSAW");
     	document.getElementById("y1s1t1").value = 9;
-    var c3 = alert("Next, we would select both the grade we either already received or are project to receive and the number of credits for that course. Let's be optimistic and say an A for English101, a 3 credit course.");
+    var c3 = alert("Next, we would select both the grade we either already received or are project to receive and the number of credits for that course. Let's be optimistic and say an A+ for English101, a 3 credit course.");
     	document.getElementById("y1s1g1").value = "4.0";
     	document.getElementById("y1s1c1").value = 3;
     var c4 = alert("Click Calculate to the right of the University of Maryland Logo and watch your organizer gather information such as total credits, semester and cumulative GPAs, and general education credits. Use this as a platform to plan your 4 years. Enjoy!");
