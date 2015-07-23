@@ -8,6 +8,36 @@ var numFields = 6; // # of empty text boxes for courses for each semester (right
 // this function executes another function called "init"
 function go() {
 	init();
+	welcome_tutorial();
+
+}
+// ############################################################################################################
+function welcome_tutorial() {
+
+    var person = prompt("Welcome to your Four Year Plan Organizer! \nTo get started, please enter your name", "");
+    
+    if (person != null) {
+        document.getElementById("name").value = person;
+    }
+
+    var school = alert("Hey " + person + ", please fill out the remaining boxes in table one to see exactly where you stand. When you are done, click the Complete button to resume the tutorial.");
+
+}
+
+function general_tutorial() {
+
+    var c1 = prompt("Great Job. Now you can see the Four Year Planner. On the right of the page is a general education tracker and to bottom center you see an expansive year table template. All we ask you to do is fill in your intended courses for each semester. For some select majors, we have included sample 4 year plans that the university suggests to follow.","ENGL101");
+    
+    if (c1 != null) {
+        document.getElementById("y1s1n1").value = c1;
+    }
+
+    var c2 = alert("I offered ENGL101 as a starter because it is a course that all students take either their first or second semesters. Also it fufills one of your gened requirements (Academic Writing). Therefore, in the type column, you would select FSAW");
+    	document.getElementById("y1s1t1").value = 9;
+    var c3 = alert("Next, we would select both the grade we either already received or are project to receive and the number of credits for that course. Let's be optimistic and say an A for English101, a 3 credit course.");
+    	document.getElementById("y1s1g1").value = "4.0";
+    	document.getElementById("y1s1c1").value = 3;
+    var c4 = alert("Click Calculate to the right of the University of Maryland Logo and watch your organizer gather information such as total credits, semester and cumulative GPAs, and general education credits. Use this as a platform to plan your 4 years. Enjoy!");
 
 }
 
@@ -34,6 +64,7 @@ function gpas() {
 	}
 	gened_go();
 	gened_progress();
+	total_credits_overall();
 }
 
 
@@ -55,6 +86,19 @@ function total_credits(year, sem) {
 	}
 	
 	document.getElementById("y" + year + "s" + sem + "tc").value = cred_total;
+}
+
+function total_credits_overall() {
+var tc1 = parseInt(document.getElementById("y" + 1 + "s" + 1 + "tc").value) || 0;
+var tc2 = parseInt(document.getElementById("y" + 1 + "s" + 2 + "tc").value) || 0;
+var tc3 = parseInt(document.getElementById("y" + 2 + "s" + 1 + "tc").value) || 0;
+var tc4 = parseInt(document.getElementById("y" + 2 + "s" + 2 + "tc").value) || 0;
+var tc5 = parseInt(document.getElementById("y" + 3 + "s" + 1 + "tc").value) || 0;
+var tc6 = parseInt(document.getElementById("y" + 3 + "s" + 2 + "tc").value) || 0;
+var tc7 = parseInt(document.getElementById("y" + 4 + "s" + 1 + "tc").value) || 0;
+var tc8 = parseInt(document.getElementById("y" + 4 + "s" + 2 + "tc").value) || 0;
+alert(tc1);
+document.getElementById("all_credits").value = tc1 + tc2 + tc3 + tc4 + tc5 + tc6 + tc7 + tc8;
 }
 
 function sem_gpa(year, sem) {
@@ -178,8 +222,7 @@ function initYearTable(num) {
 	tablebody.appendChild(row);
 	table.appendChild(tablebody);
 	
-	// modified names for clarity, change back to "Semester 1" and "Semester 2"
-	var sem1 = createSemTable("Fall Semester", id + "s1");
+	var sem1 = createSemTable("Fall Semester ", id + "s1");
 	var sem2 = createSemTable("Spring Semester", id + "s2");
 	// var scol = createSemTable("SPRING", id + "s");
 	// var mcol = createSemTable("SUMMER", id + "m");
@@ -558,7 +601,6 @@ function gened_go() {
 	}	
 }
 
-
 function gened_progress() {
 var fsaw = parseInt(document.getElementById("fsaw").value) || 0;
 var fsma = parseInt(document.getElementById("fsma").value) || 0;
@@ -567,11 +609,26 @@ var fsoc = parseInt(document.getElementById("fsoc").value) || 0;
 var fsar = parseInt(document.getElementById("fsar").value) || 0;
 
 document.getElementById("fs_sum").value = fsaw + fsma + fspw + fsoc + fsar;
-if (document.getElementById("fs_sum").value == 15); {
-	document.getElementById("fs_complete").value = "Complete";
-	document.getElementById("fs_complete").backgroundColor = "green";
-	}
+
+var dsns = parseInt(document.getElementById("dsns").value) || 0;
+var dshu = parseInt(document.getElementById("dshu").value) || 0;
+var dshs = parseInt(document.getElementById("dshs").value) || 0;
+var dssp_in = parseInt(document.getElementById("dssp_in").value) || 0;
+var dssp_out = parseInt(document.getElementById("dssp_out").value) || 0;
+
+document.getElementById("ds_sum").value = dsns + dshu + dshs + dssp_in + dssp_out;
+
+var dvup = parseInt(document.getElementById("dvup").value) || 0;
+var dvcc = parseInt(document.getElementById("dvcc").value) || 0;
+
+document.getElementById("dv_sum").value = dvup + dvcc;
+
+var scis = parseInt(document.getElementById("scis").value) || 0;
+
+document.getElementById("sc_sum").value = scis;
 }
+
+
 
 // This is the function for selecting school (After you select a college within UMD the next drop down major your specific major will be modified to just majors within that major)
 function selectSchool() {
