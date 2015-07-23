@@ -1,7 +1,3 @@
-function sample_plan() {
-	meche();
-	cmsc();
-}
 
 function meche() {
 // year 1
@@ -121,6 +117,68 @@ function cmsc() {
 	for (i = 1; i <= 5; i++) {
 		var sem2 = ["CMSC4XX", "CMNS390", "UL CONC", "ELEC", "ELEC"];
 		var cred2 = [3,3,3,3,3];
+			document.getElementById("y" + 4 + "s" + 2 + "n" + i).value = sem2[i-1];
+			document.getElementById("y" + 4 + "s" + 2 + "c" + i).value = cred2[i-1];
+	}					
+
+}
+//#####################################################################
+function finance() {
+// year 1
+	for (i = 1; i <= 5; i++) {
+		var sem1 = ["ECON200", "MATH220", "BMGT110", "ENGL101", "LOWER ELEC"];
+		var cred1 = [4,3,3,3,3];
+			document.getElementById("y" + 1 + "s" + 1 + "n" + i).value = sem1[i-1];
+			document.getElementById("y" + 1 + "s" + 1 + "c" + i).value = cred1[i-1];
+	}
+
+	for (i = 1; i <= 5; i++) {
+		var sem2 = ["ECON201", "BMGT230", "COMM107", "GENED", "LOWER ELEC"];
+		var cred2 = [4,3,3,3,3];
+			document.getElementById("y" + 1 + "s" + 2 + "n" + i).value = sem2[i-1];
+			document.getElementById("y" + 1 + "s" + 2 + "c" + i).value = cred2[i-1];
+	}
+// year 2
+	for (i = 1; i <= 5; i++) {
+		var sem1 = ["BMGT220", "GENED", "GENED", "LOWER ELEC", "LOWER ELEC"];
+		var cred1 = [43,4,3,3,3];
+			document.getElementById("y" + 2 + "s" + 1 + "n" + i).value = sem1[i-1];
+			document.getElementById("y" + 2 + "s" + 1 + "c" + i).value = cred1[i-1];
+	}
+
+	for (i = 1; i <= 6; i++) {
+		var sem2 = ["BMGT221", "GENED", "GENED", "BMGT367", "LOWER ELEC", "LOWER ELEC"];
+		var cred2 = [3,3,3,1,3,2];
+			document.getElementById("y" + 2 + "s" + 2 + "n" + i).value = sem2[i-1];
+			document.getElementById("y" + 2 + "s" + 2 + "c" + i).value = cred2[i-1];
+	}		
+
+// year 3
+	for (i = 1; i <= 5; i++) {
+		var sem1 = ["BMGT301", "BMGT340", "BMGT350", "BMGT341", "UPPER ELEC"];
+		var cred1 = [3,3,3,3,3];
+			document.getElementById("y" + 3 + "s" + 1 + "n" + i).value = sem1[i-1];
+			document.getElementById("y" + 3 + "s" + 1 + "c" + i).value = cred1[i-1];
+	}
+
+	for (i = 1; i <= 5; i++) {
+		var sem2 = ["BMGT343", "BMGT440", "BMGT364", "GENED", "UPPER ELEC"];
+		var cred2 = [3,3,3,3,3];
+			document.getElementById("y" + 3 + "s" + 2 + "n" + i).value = sem2[i-1];
+			document.getElementById("y" + 3 + "s" + 2 + "c" + i).value = cred2[i-1];
+	}	
+
+// year 4
+	for (i = 1; i <= 5; i++) {
+		var sem1 = ["BMGT44X", "MAJOR REQ", "BMGT380", "UPPER ECON", "UPPER ELEC"];
+		var cred1 = [3,3,3,3,3];
+			document.getElementById("y" + 4 + "s" + 1 + "n" + i).value = sem1[i-1];
+			document.getElementById("y" + 4 + "s" + 1 + "c" + i).value = cred1[i-1];
+	}
+
+	for (i = 1; i <= 4; i++) {
+		var sem2 = ["BMGT44X", "BMGT44X", "BMGT495", "UPPER ELEC"];
+		var cred2 = [3,3,3,3];
 			document.getElementById("y" + 4 + "s" + 2 + "n" + i).value = sem2[i-1];
 			document.getElementById("y" + 4 + "s" + 2 + "c" + i).value = cred2[i-1];
 	}					
