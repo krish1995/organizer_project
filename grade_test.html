@@ -18,58 +18,61 @@
 
 <table align=left border=5 width=65% >
         <tr>
-                <th colspan=100 class="container-fluid" style="background-color: #fcf8e3" /><font size=+5><center>Four Year Organizer</center></font></th>
+                <th colspan=100 class="container-fluid" style="background-color: #fcf8e3" />
+   
+ 
+          
+                    <font size=+5>
+                        <center>Four Year Organizer</center>
+                    </font>
+
+                </th>
         </tr>
         <tr>
                 <th colspan=3 class="container-fluid" style="background-color: #fcf8e3" ><font size= +1>Name:</font></th>
-                        <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" id="name" VALUE="" maxlength=25 style="width: 600px;" ><B>
+                        <td align=left class="container-fluid" style="background-color: #f2dede">
+                            <input type=text name="name" id="name" value="" maxlength=25 style="width: 600px;" ><B>
                         </td>
 
         </tr>
         <tr>
                 <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>School:</font></th>
                         <td align=left class="container-fluid" style="background-color: #f2dede">
-                                <select name="college" id="college" maxlength=75 size=1 style="width: 300px;">
-                                        <option value="1" selected>Agriculture and Natural Planning 
-                                        <option value="2" selected>Architecture, Planning, and Preservation 
-                                        <option value="3" selected>Arts and Humanities 
-                                        <option value="4" selected>Behavorial and Social Sciences 
-                                        <option value="5" selected>Smith School of Business
-                                        <option value="6" selected>Computer, Mathematical, and Natural Sciences
-                                        <option value="7" selected>Education
-                                        <option value="8" selected>Clark School of Engineering
-                                        <option value="9" selected>Graduate School
-                                        <option value="10" selected>Journalism
-                                        <option value="11" selected>Information Studies
-                                        <option value="12" selected>Public Health
-                                        <option value="13" selected>Public Policy
-                                        <option value="14" selected>Undergraduate Studies
-                                        <option value="15" selected>
-                                </select>
-                                <select name="college_double" id="college_double" maxlength=75 size=1 style="width: 300px;">
-                                        <option value="1" selected>Agriculture and Natural Planning 
-                                        <option value="2" selected>Architecture, Planning, and Preservation 
-                                        <option value="3" selected>Arts and Humanities 
-                                        <option value="4" selected>Behavorial and Social Sciences 
-                                        <option value="5" selected>Smith School of Business
-                                        <option value="6" selected>Computer, Mathematical, and Natural Sciences
-                                        <option value="7" selected>Education
-                                        <option value="8" selected>Clark School of Engineering
-                                        <option value="9" selected>Graduate School
-                                        <option value="10" selected>Journalism
-                                        <option value="11" selected>Information Studies
-                                        <option value="12" selected>Public Health
-                                        <option value="13" selected>Public Policy
-                                        <option value="14" selected>Undergraduate Studies
-                                        <option value="15" selected>
-                                </select>
+                                <form name="form1">
+                                    <p><select name="select1" onChange="ldMenu(this.selectedIndex);" maxlength=75 size=1 style="width: 600px; length: 200px">
+                                      <option value selected>Select a School </option>
+                                      <option value>Agriculture and Natural Planning  </option>
+                                      <option value>Architecture, Planning, and Preservation </option>
+                                      <option value>Arts and Humanities </option>
+                                      <option value>Behavorial and Social Sciences  </option>
+                                      <option value>Smith School of Business </option>
+                                      <option value>Computer, Mathematical, and Natural Sciences </option>
+                                      <option value>Education  </option>
+                                      <option value>Clark School of Engineering </option>
+                                      <option value>Graduate School </option>
+                                      <option value>Journalism  </option>
+                                      <option value>Information Studies </option>
+                                      <option value>Public Health </option>
+                                      <option value>Public Policy  </option>
+                                      <option value>Undergraduate Studies </option>                   
+                                    </select> </p>
+                                </form>
                         </td>
         </tr>
         <tr>
-                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Major:</font></th>
-                <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=25 style="width: 600px;"><B>  
-                
-                </td>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3">
+                    <font size=+1>Major:</font>
+                </th>
+                    <td align=left class="container-fluid" style="background-color: #f2dede">
+                   
+                        <form name="form2" method="post" action enctype="text/plain">
+                            <p>
+                                <select name="select2" onChange="goToPage()"  maxlength=75 size=1 style="width: 600px;">
+                                    <option selected value="Select a page after selecting a subject">Select a major after selecting a school</option>
+                                </select> 
+                            </p>
+                        </form>  
+                    </td>
         </tr>
         <tr>
                 <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Minor:</font></th>
@@ -157,13 +160,17 @@
                                         <option value="10" selected>Technology Entrepreneurship
                                         <option value="10" selected>U.S. Latina/o Studies
                                         <option value="10" selected>None
-                                        <option value="10" selected>                                    
+                                        <option value="10" selected>Select a minor                                   
                                 </select>
                           </td>      
         </tr>
         <tr>
-                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size= +1>Scholarship(s):</font></th>
-                        <td align=left class="container-fluid" style="background-color: #f2dede"><input type=text name="name" VALUE="" maxlength=100 style="width: 600px;"><B>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3">
+                    <font size= +1>Scholarship(s):</font>
+                </th>
+                        <td align=left class="container-fluid" style="background-color: #f2dede">
+                            <input type=text name="name" value="" maxlength=100 style="width: 600px;"><B>
+                        </td>
 
         </tr>
         <tr>
@@ -182,7 +189,7 @@
                                         <option value="10" selected>Jimenez-Porter Writer's House
                                         <option value="11" selected>Language House
                                         <option value="12" selected>Virtus
-                                        <option value="13" selected>
+                                        <option value="13" selected>Select a specialty program
                                 </select>
                                 <select name="program2" maxlength=500000 size=1 style="width: 300px;">
                                         <option value="1" selected>Beyond the Classroom
@@ -197,22 +204,46 @@
                                         <option value="10" selected>Jimenez-Porter Writer's House
                                         <option value="11" selected>Language House
                                         <option value="12" selected>Virtus
-                                        <option value="13" selected>
+                                        <option value="13" selected>Select a speciality program
                                 </select>
                         </td>
         </tr>
-<tr>
+        <tr>
                 <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Incoming Credits Completed:</font></th>
                         <td align=left class="container-fluid" style="background-color: #f2dede">
-                                <input type=text name="incoming_credits" VALUE="" maxlength=25 style="width: 550px;"><B>  
-                                <input type=text name="incoming_credits" id="incoming_credits" VALUE="" maxlength=25 style="width: 50px;"><B>
+                                <input type=text name="incoming_credits" value="AP Biology, Chem, IB courses..." maxlength=65 style="width: 550px;"><B>  
+                                <input type=text name="incoming_credits" id="incoming_credits" value="#" maxlength=25 style="width: 50px;"><B>
 
                                 <!-- creates a button for completion of table 1-->
                                 <input type="button" value="Complete" id="af_mech" onClick="general_tutorial()" class="btn btn-danger"></input>
                         </td>
         </tr>
+        <tr>
+                <th colspan=3 class="container-fluid" style="background-color: #fcf8e3"><font size=+1>Functions:</font></th>
+                        <td align=left class="container-fluid" style="background-color: #f2dede">
+                                <!-- creates a button to add another year; 
+                                1. input type: type of <input> element to display: here we want a button to click on
+                                2. value: the text is says on the botton
+                                3. id: the id of the textbox
+                                4. onClick: when clicked, it will conduct this operation. For example, the Add year botton will perform the add_year function written in the javascript-->
+                                <input type="button" value="Add Year" id="add_year" onClick="add_year()" class="btn btn-danger"></input>
 
-        </table>
+
+                                <!-- creates a button for the calculation of all the gpa's and gened functions-->
+                                <input type="button" value="Calculate" id="calculate_button" onClick="gpas()" class="btn btn-danger"></input>
+
+                                 <!-- creates a button for Mechanical Engineering plan-->
+                                <input type="button" value="Mechanical Engineering" id="af_mech" onClick="meche()" class="btn btn-danger"></input>
+
+                                <!-- creates a button for Computer Science plan-->
+                                <input type="button" value="Computer Science" id="af_mech" onClick="cmsc()" class="btn btn-danger"></input> 
+
+                                <!-- creates a button for Finance Plan-->
+                                 <input type="button" value="Finance" id="af_mech" onClick="finance()" class="btn btn-danger"></input> 
+                        </td>
+        </tr>
+
+</table>
 
 
         <!-- the Gen ed calculater table-->
